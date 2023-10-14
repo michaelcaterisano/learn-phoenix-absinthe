@@ -4,20 +4,24 @@ defmodule MyAppWeb.LiveTest do
 
   def render(assigns) do
     ~H"""
-    <button phx-click="inc_temperature">+</button>
+    <button phx-click="inc_temperature" class="rounded-lg bg-indigo-600">increment</button>
     Current temperature: <%= @temperature %>
+
+    <br>
+    <a href="/">Home</a>
+
+    <br>
+    <a href="/notes">Notes</a>
     """
   end
 
   def mount(_, _, socket) do
-    IO.inspect("mount")
     temperature = 103
     {:ok, assign(socket, :temperature, temperature)}
   end
 
   def handle_event("inc_temperature", _, socket) do
-    IO.inspect("handle_event")
-    new = 300
-    {:noreply, assign(socket, :temperature, new)}
+    temperature = socket.assigns.temperature + 1
+    {:noreply, assign(socket, :temperature, temperature)}
   end
 end

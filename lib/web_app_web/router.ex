@@ -15,13 +15,19 @@ defmodule WebAppWeb.Router do
     plug(:accepts, ["json"])
   end
 
-  # scope "/", WebAppWeb do
-  #   pipe_through(:browser)
+  scope "/", WebAppWeb do
+    pipe_through(:browser)
+    # render home page
+    get("/", PageController, :home)
+  end
 
-  #   get("/", PageController, :home)
-  # end
+  scope "/notes", WebAppWeb do
+    pipe_through(:browser)
+    # render notes page
+    get("/", PageController, :notes)
+  end
 
-  scope "/", MyAppWeb
+  scope "/live", MyAppWeb do
     pipe_through(:browser)
     live("/", LiveTest)
   end

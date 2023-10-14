@@ -1,3 +1,14 @@
 <div>
-  hi <button phx-click="inc_temperature">+</button>
+  <button phx-click={show_modal("my-modal")}>
+    Show Modal
+  </button>
+  <WebAppWeb.CoreComponents.modal id="my-modal">
+    <p>hi</p>
+  </WebAppWeb.CoreComponents.modal>
+
+  <br>
+  <a href="/">Home</a>
+
+  <br>
+  <a href="/live">Live</a>
 </div>
