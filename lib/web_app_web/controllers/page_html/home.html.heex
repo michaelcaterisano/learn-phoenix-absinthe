@@ -1,7 +1,7 @@
 <.flash_group flash={@flash} />
 <.header>
-  Michael Caterisano
-  <:subtitle>whelp?</:subtitle>
+  <%= @props.name %>
+  <:subtitle><%= @props.title %></:subtitle>
   <:actions>
     <div>
       <p><a href="notes">notes</a></p>
@@ -9,8 +9,6 @@
     </div>
   </:actions>
 </.header>
-
-<.list>
-  <:item title="name"><%= @props.name %></:item>
-  <:item title="title"><%= @props.title %></:item>
-</.list>
+<div>
+  ok
+</div>

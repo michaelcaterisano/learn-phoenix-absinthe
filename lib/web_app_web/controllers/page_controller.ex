@@ -4,8 +4,11 @@ defmodule WebAppWeb.PageController do
   import :rand
 
   def home(conn, _params) do
+    name = "Michael Caterisano"
+    title = "Software Engineer"
+
     conn
-    |> render(:home, layout: false, props: %{name: uniform(100), title: uniform(100)})
+    |> render(:home, layout: false, props: %{name: name, title: title})
   end
 
   def notes(conn, _params) do
