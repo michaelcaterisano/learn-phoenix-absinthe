@@ -1,5 +1,6 @@
 defmodule WebAppWeb.Router do
   use WebAppWeb, :router
+
   import Phoenix.LiveView.Router
 
   pipeline :browser do

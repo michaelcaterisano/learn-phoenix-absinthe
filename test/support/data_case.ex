@@ -18,12 +18,12 @@ defmodule WebApp.DataCase do
 
   using do
     quote do
-      alias WebApp.Repo
-
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
       import WebApp.DataCase
+
+      alias WebApp.Repo
     end
   end
 

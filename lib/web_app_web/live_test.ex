@@ -13,7 +13,7 @@ defmodule WebAppLive.LiveTest do
     >
       increment
     </button>
-    <.live_component module={WebAppLive.TestComponent} id={1} temperature={assigns.temperature}/>
+    <.live_component module={WebAppLive.TestComponent} id={1} temperature={assigns.temperature} />
     """
   end
 
