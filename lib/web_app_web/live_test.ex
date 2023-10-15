@@ -1,17 +1,19 @@
-defmodule MyAppWeb.LiveTest do
+defmodule WebAppLive.LiveTest do
   # In Phoenix apps, the line is typically: use MyAppWeb, :live_view
   use Phoenix.LiveView
 
+  alias WebAppWeb.CoreComponents
+
   def render(assigns) do
     ~H"""
-    <button phx-click="inc_temperature" class="rounded-lg bg-indigo-600">increment</button>
-    Current temperature: <%= @temperature %>
-
-    <br>
-    <a href="/">Home</a>
-
-    <br>
-    <a href="/notes">Notes</a>
+    <CoreComponents.back navigate="/">Back to home</CoreComponents.back>
+    <button
+      phx-click="inc_temperature"
+      class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+    >
+      increment
+    </button>
+    <.live_component module={WebAppLive.TestComponent} id={1} temperature={assigns.temperature}/>
     """
   end
 

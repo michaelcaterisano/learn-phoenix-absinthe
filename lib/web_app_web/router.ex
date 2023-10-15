@@ -27,7 +27,7 @@ defmodule WebAppWeb.Router do
     get("/", PageController, :notes)
   end
 
-  scope "/live", MyAppWeb do
+  scope "/live", WebAppLive do
     pipe_through(:browser)
     live("/", LiveTest)
   end

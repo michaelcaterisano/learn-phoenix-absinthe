@@ -1,14 +1,16 @@
 <div>
-  <button phx-click={show_modal("my-modal")}>
+  <.back navigate={~p"/"}>Back to home</.back>
+
+  <button
+    phx-click={show_modal("my-modal")}
+    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+  >
     Show Modal
   </button>
   <WebAppWeb.CoreComponents.modal id="my-modal">
-    <p>hi</p>
+    here's a modal
   </WebAppWeb.CoreComponents.modal>
-
-  <br>
-  <a href="/">Home</a>
-
-  <br>
-  <a href="/live">Live</a>
+</div>
+<div>
+  <%!-- This should be a component --%> Here are some notes
 </div>
