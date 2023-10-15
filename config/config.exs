@@ -16,7 +16,6 @@ config :web_app,
   password: "postgres",
   hostname: "localhost"
 
-
 # Configures the endpoint
 config :web_app, WebAppWeb.Endpoint,
   url: [host: "localhost"],
