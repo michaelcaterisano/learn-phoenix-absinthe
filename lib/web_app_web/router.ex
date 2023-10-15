@@ -28,6 +28,12 @@ defmodule WebAppWeb.Router do
     get("/", PageController, :notes)
   end
 
+  scope "/weather", WebAppWeb do
+    pipe_through(:browser)
+    # render weather page
+    get("/", PageController, :weather)
+  end
+
   scope "/live", WebAppLive do
     pipe_through(:browser)
     live("/", LiveTest)

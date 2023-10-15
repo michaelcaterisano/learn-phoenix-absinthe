@@ -1,4 +1,4 @@
-defmodule Weather do
+defmodule WebApp.Models.Weather do
   @moduledoc false
   use Ecto.Schema
 
