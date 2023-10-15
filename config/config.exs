@@ -10,6 +10,13 @@ import Config
 config :web_app,
   ecto_repos: [WebApp.Repo]
 
+config :web_app,
+  database: "ecto_simple",
+  username: "postgres",
+  password: "postgres",
+  hostname: "localhost"
+
+
 # Configures the endpoint
 config :web_app, WebAppWeb.Endpoint,
   url: [host: "localhost"],
