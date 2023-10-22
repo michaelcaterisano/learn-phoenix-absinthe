@@ -1,5 +1,7 @@
 defmodule WebApp.Models.Weather do
-  @moduledoc false
+  @moduledoc """
+  Defines the Weather model.
+  """
   use Ecto.Schema
 
   # weather is the DB table

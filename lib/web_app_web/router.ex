@@ -22,6 +22,14 @@ defmodule WebAppWeb.Router do
     get("/", PageController, :home)
   end
 
+  scope "/api" do
+    pipe_through :api
+
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: WebAppWeb.Schema
+
+    forward "/", Absinthe.Plug, schema: WebAppWeb.Schema
+  end
+
   scope "/notes", WebAppWeb do
     pipe_through(:browser)
     # render notes page
