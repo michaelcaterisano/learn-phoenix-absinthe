@@ -3,8 +3,13 @@ defmodule WebAppWeb.Schema do
   use Absinthe.Schema
 
   import_types(WebAppWeb.Schema.Types.Query.Type)
+  import_types(WebAppWeb.Schema.Types.Mutation.Type)
 
-  query(name: "queryaaazzz") do
-    import_fields(:query_type_fields)
+  query do
+    import_fields(:query_fields)
+  end
+
+  mutation do
+    import_fields(:mutation_fields)
   end
 end
