@@ -3,6 +3,8 @@ defmodule WebAppWeb.Schema.Types.Mutation.Resolvers do
   use Absinthe.Schema.Notation
 
   def create_user(_parent, _args, _resolution) do
+    IO.inspect("create_user")
+    {:ok, %{user: %{id: 123, name: "Larry CreatedUser", email: ""}}}
     {:ok, %{user: %{id: 123, name: "Larry CreatedUser", email: ""}}}
   end
 end

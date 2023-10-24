@@ -25,7 +25,7 @@ defmodule WebAppWeb.Router do
   scope "/api" do
     pipe_through :api
 
-    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: WebAppWeb.Schema
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: WebAppWeb.Schema, socket: WebAppWeb.UserSocket
 
     forward "/", Absinthe.Plug, schema: WebAppWeb.Schema
   end

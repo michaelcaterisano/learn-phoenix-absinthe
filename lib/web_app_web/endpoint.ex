@@ -1,5 +1,6 @@
 defmodule WebAppWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :web_app
+  use Absinthe.Phoenix.Endpoint
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
@@ -10,6 +11,8 @@ defmodule WebAppWeb.Endpoint do
     signing_salt: "/jeO5zsp",
     same_site: "Lax"
   ]
+
+  socket "/users-socket", WebAppWeb.UserSocket, websocket: true
 
   socket("/live", Phoenix.LiveView.Socket, websocket: [connect_info: [session: @session_options]])
 

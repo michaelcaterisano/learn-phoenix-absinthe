@@ -17,9 +17,12 @@ defmodule WebApp.Application do
       # Start Finch
       {Finch, name: WebApp.Finch},
       # Start the Endpoint (http/https)
-      WebAppWeb.Endpoint
+      WebAppWeb.Endpoint,
       # Start a worker by calling: WebApp.Worker.start_link(arg)
       # {WebApp.Worker, arg}
+
+      # Setup Absinthe Subscriptions
+      {Absinthe.Subscription, WebAppWeb.Endpoint}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

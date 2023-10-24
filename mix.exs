@@ -34,6 +34,7 @@ defmodule WebApp.MixProject do
     [
       {:absinthe, "~> 1.7", override: true},
       {:absinthe_plug, "~> 1.5.8"},
+      {:absinthe_phoenix, "~> 2.0"},
       {:phoenix, "~> 1.7.7"},
       {:phoenix_ecto, "~> 4.4"},
       {:ecto_sql, "~> 3.10"},
