@@ -5,6 +5,7 @@ defmodule WebAppWeb.UserSocket do
   @socket_id Ecto.UUID.generate()
 
   def connect(_params, socket, _connect_info) do
+    IO.inspect("connected to socket")
     {:ok, socket}
   end
 

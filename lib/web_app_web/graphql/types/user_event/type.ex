@@ -8,7 +8,7 @@ defmodule WebAppWeb.Schema.Types.UserEvent.Type do
 
     resolve_type(fn payload, res ->
       IO.inspect(payload)
-      {:ok, :create_user_payload}
+      :create_user_payload
     end)
   end
 end

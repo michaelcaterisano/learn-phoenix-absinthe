@@ -18,7 +18,7 @@ defmodule WebAppWeb.Schema.Types.Subscription.Type do
 
       trigger([:create_user],
         topic: fn payload ->
-          IO.inspect("topiczzz")
+          IO.inspect(payload, label: "sub payload")
           "user:#{payload.user.id}"
         end
       )
