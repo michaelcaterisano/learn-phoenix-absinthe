@@ -6,7 +6,6 @@ defmodule WebAppWeb.Schema.Types.CreateUserPayload.Type do
 
   @desc "Payload for creating a user"
   object :create_user_payload do
-    meta(:type, :create_user_payload)
     field :user, :user
     field :metadata, :create_user_metadata, resolve: &Resolvers.create_user_metadata/3
   end

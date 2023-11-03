@@ -6,9 +6,6 @@ defmodule WebAppWeb.Schema.Types.UserEvent.Type do
   union :user_event do
     types([:create_user_payload])
 
-    resolve_type(fn payload, res ->
-      IO.inspect(payload)
-      :create_user_payload
-    end)
+    resolve_type(fn %{private: %{type: type}}, _ -> type end)
   end
 end
